@@ -117,7 +117,7 @@ script_loading.preload_extensions(extensions.extensions_dir, parser)
 script_loading.preload_extensions(extensions.extensions_builtin_dir, parser)
 
 if os.environ.get('IGNORE_CMD_ARGS_ERRORS', None) is None:
-    cmd_opts = parser.parse_known_args()[0]
+    cmd_opts = parser.parse_args()
 else:
     cmd_opts, _ = parser.parse_known_args()
 
