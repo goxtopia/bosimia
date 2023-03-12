@@ -13,7 +13,7 @@ import numpy as np
 import piexif
 import piexif.helper
 from PIL import Image, ImageFont, ImageDraw, PngImagePlugin
-import fonts.ttf
+from fonts.ttf import Roboto
 import string
 import json
 import hashlib
@@ -144,9 +144,9 @@ def draw_grid_annotations(im, width, height, hor_texts, ver_texts, margin=0):
 
     def get_font(fontsize):
         try:
-            return ImageFont.truetype(opts.font or fonts.ttf.font_files.popitem(), fontsize)
+            return ImageFont.truetype(opts.font or Roboto, fontsize)
         except Exception:
-            return ImageFont.truetype(fonts.ttf.font_files.popitem(), fontsize)
+            return ImageFont.truetype(Roboto, fontsize)
 
     def draw_texts(drawing, draw_x, draw_y, lines, initial_fnt, initial_fontsize):
         for i, line in enumerate(lines):
