@@ -1,4 +1,4 @@
-blendmodes
+blendmodes==2022
 transformers==4.25.1
 accelerate==0.12.0
 basicsr==1.4.2
